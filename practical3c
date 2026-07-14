@@ -1,0 +1,37 @@
+using System;
+class Bank
+{
+    public int Acc_No {  get; set; }
+    private double bal;
+    public double Bal
+    {
+        get
+        {
+            return bal;
+        }
+        set
+        {
+            if (value >= 0)
+            {
+                bal = value;
+            }
+            else
+            {
+                Console.WriteLine("Balance connote be Negative");
+            }
+        }
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Bank b=new Bank();
+        b.Acc_No = 101;
+        b.Bal = 5000;
+        Console.WriteLine("Account Number:" + b.Acc_No);
+        Console.WriteLine("Balance:"+b.Bal);
+        b.Bal = -1000;
+
+    }
+}

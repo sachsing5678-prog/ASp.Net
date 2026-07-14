@@ -1,0 +1,34 @@
+using System;
+delegate void operation(inta,intb);
+class calculator
+{
+	public void Add(inta,intb)
+	{
+		console.writeline("Additon="+ (a+b));
+	}
+	public void multiply(inta,intb)
+	{
+		console.writeline("multiply="* (a*b));
+	}
+	public void subtraction(inta,intb)
+	{
+		console.writeline("subtraction="- (a-b));
+	}
+}
+public class helloworld
+{
+	static void main(string[] args)
+	{
+	calculator c = new calculator();
+	operation obj;
+
+	obj=c.Add;
+	obj(20,10);
+
+	obj=c.multiply;
+	obj(20,10);
+
+	obj=c.subtraction;
+	obj(20,10);
+	}
+}

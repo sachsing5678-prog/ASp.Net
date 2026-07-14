@@ -1,0 +1,28 @@
+using System;
+delegate void Message();
+class Msg_Print
+{
+    public void Hello()
+    {
+        Console.WriteLine("HELLO TO C# CODING");
+    }
+    public void Msg()
+    {
+        Console.WriteLine("this is your welcome Message");
+    }
+    public void Thank()
+    {
+        Console.WriteLine("Thank you for Coding");
+    }
+}
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Msg_Print mp = new Msg_Print();
+        Message msg = mp.Hello;
+        msg += mp.Msg;
+        msg += mp.Thank;
+        msg();
+    }
+}
